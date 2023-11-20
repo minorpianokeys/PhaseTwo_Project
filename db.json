@@ -1,0 +1,94 @@
+{
+  "cocktails": [
+    {
+      "id": 1,
+      "name": "Cosmopolitan",
+      "image": "https://assets-prd.punchdrink.com/wp-content/uploads/2020/03/13102145/Article-Ultimate-Cosmo-Cosmopolitan-Cocktail-Recipe.jpg",
+      "spirit": "Vodka",
+      "ingredients": [
+        "Cointreau",
+        "Cranberry Juice",
+        "Lime Juice"
+      ],
+      "garnish": "none"
+    },
+    {
+      "id": 2,
+      "name": "Gin Martini",
+      "image": "https://www.pamperedchef.com/iceberg/com/recipe/1445579-lg.jpg",
+      "spirit": "Gin",
+      "ingredients": [
+        "0.3 oz Dry Vermouth"
+      ],
+      "garnish": "Lemon Twist"
+    },
+    {
+      "name": "Old Fashioned",
+      "image": "https://www.liquor.com/thmb/rxbQEXR-CQpExjfS8xtOAWXLovM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/bourbon-old-fashioned-4000x4000-primary-ig-f0ce04bec6754db187ab1e8a16fd45c3.jpg",
+      "spirit": "Whiskey",
+      "ingredients": [
+        " Bitters",
+        " rawr"
+      ],
+      "garnish": "Orange",
+      "id": 3
+    },
+    {
+      "name": "Margarita",
+      "image": "https://images.squarespace-cdn.com/content/v1/5668afe4c21b86d8ce6fc49c/1550015336305-Q10UH5U1A33SPQSFWM72/EditorialCocktails_3x_0014_El_Diablo_Gallery3X.png.png?format=2500w",
+      "spirit": "Tequila",
+      "ingredients": [
+        " 1 oz. Triple Sec",
+        " 0.75 oz. Lime Juice"
+      ],
+      "garnish": "Lime",
+      "id": 4
+    },
+    {
+      "name": "Paloma",
+      "image": "https://images.squarespace-cdn.com/content/v1/5668afe4c21b86d8ce6fc49c/1550023883061-18PJ145MA9I190FW86N3/Paloma_Background%402x.png?format=2500w",
+      "spirit": "Tequila",
+      "ingredients": [
+        " 0.5 oz. Lime Juice",
+        " Grapefruit Soda"
+      ],
+      "garnish": "Grapefruit",
+      "id": 5
+    },
+    {
+      "name": "French 75",
+      "image": "https://images.squarespace-cdn.com/content/v1/5668afe4c21b86d8ce6fc49c/1550347676341-ZPL6SJ8SCI7ORGQ0BVJO/French_75_Background%402x.png?format=2500w",
+      "spirit": "Gin",
+      "ingredients": [
+        " 0.5 oz. Simple syrup",
+        " 0.5 oz. Lemon Juice",
+        " Sparkling Wine"
+      ],
+      "garnish": "Lemon Twist",
+      "id": 6
+    },
+    {
+      "name": "Moscow Mule",
+      "image": "https://images.squarespace-cdn.com/content/v1/5668afe4c21b86d8ce6fc49c/1550419753136-B4YZ9HVVPEVSE7NP372X/EditorialCocktails_2x_0036_Moscow_Mule_Gallery3X.png.png?format=2500w",
+      "spirit": "Vodka",
+      "ingredients": [
+        "0.75 oz Ginger Syrup",
+        " 0.75 oz. Lime Juice",
+        " Soda"
+      ],
+      "garnish": "Lime Wedge, Fresh Mint",
+      "id": 7
+    },
+    {
+      "name": "Sazerac",
+      "image": "https://images.squarespace-cdn.com/content/v1/5668afe4c21b86d8ce6fc49c/1550431069163-I870G4NB4B1SCEZ225BI/EditorialCocktails_2x_0044_Sazerac_Gallery3X.png.png?format=2500w",
+      "spirit": "Whiskey",
+      "ingredients": [
+        "0.25 oz. Absinthe",
+        " Bitters"
+      ],
+      "garnish": "Lemon Twist",
+      "id": 8
+    }
+  ]
+}

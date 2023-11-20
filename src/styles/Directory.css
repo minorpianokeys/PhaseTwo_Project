@@ -1,0 +1,30 @@
+.directory-title {
+  text-align: center;
+}
+
+.cocktail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+.card {
+    background-color: rgb(200, 200, 200);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    height: 200px;
+    width: 400px;
+  }
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cocktail-info {
+    margin-left: 20px;
+}
