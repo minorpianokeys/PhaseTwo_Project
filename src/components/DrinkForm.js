@@ -39,6 +39,7 @@ function DrinkForm() {
                 type="text"
                 name="name"
                 className="form-input"
+                value={name}
                 onChange={(e) => setName(e.target.value)}
                 />
             </label>
@@ -49,12 +50,13 @@ function DrinkForm() {
                 type="text"
                 name="image"
                 className="form-input"
+                value={image}
                 onChange={(e) => setImage(e.target.value)}
                 />
             </label>
             <label className="form-label">
                 Spirit:
-                <select name="spirit" className="form-input" onChange={(e) => setSpirit(e.target.value)}>
+                <select name="spirit" className="form-input" value={spirit} onChange={(e) => setSpirit(e.target.value)}>
                     <option value="Vodka">Vodka</option>
                     <option value="Gin">Gin</option>
                     <option value="Rum">Rum</option>
@@ -69,6 +71,7 @@ function DrinkForm() {
                 type="text"
                 name="ingredients"
                 className="form-input"
+                value={ingredients}
                 onChange={(e) => setIngredients(e.target.value)}
                 />
             </label>
@@ -79,6 +82,7 @@ function DrinkForm() {
                 type="text"
                 name="garnish"
                 className="form-input"
+                value={garnish}
                 onChange={(e) => setGarnish(e.target.value)}
                 />
             </label>

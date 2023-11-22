@@ -6,6 +6,7 @@ function Home() {
     const featuredCocktail = {
         name: "Cosmopolitan",
         image: "https://assets-prd.punchdrink.com/wp-content/uploads/2020/03/13102145/Article-Ultimate-Cosmo-Cosmopolitan-Cocktail-Recipe.jpg",
+        spirit: "Vodka",
         ingredients: [
           "Vodka",
           "Cointreau",
