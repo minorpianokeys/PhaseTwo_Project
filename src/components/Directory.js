@@ -15,7 +15,7 @@ function Directory() {
     .then(cocktailData => setCocktails(cocktailData))
   }, [])
 
-  function handleStateChange(data) {
+  function handleAddDrink(data) {
     setCocktails([...cocktails, data])
   }
 
@@ -26,7 +26,7 @@ function Directory() {
     return (
         <div>
           <h2 className="directory-title">DIRECTORY</h2>
-          <DrinkForm onSubmit={handleStateChange}/>
+          <DrinkForm onSubmit={handleAddDrink}/>
           <SearchBar onSearch={(searchInput) => setSearchInput(searchInput)} onFilter={(filter) => setCategory(filter)}/>
           <div className="cocktail-container">
           {filteredCocktails.map(cocktail => (
