@@ -7,7 +7,7 @@ function Directory() {
     const [cocktails, setCocktails] = useState([]);
     // const [filteredCocktails, setFilteredCocktails] = useState([]);
     const [searchInput, setSearchInput] = useState("");
-    const [filter, setFilter] = useState("All");
+    const [category, setCategory] = useState("All");
 
     useEffect(() => {
       fetch("http://localhost:3001/cocktails")
@@ -26,13 +26,15 @@ function Directory() {
     //     setFilteredCocktails(filtered);
     //   }, [cocktails, searchInput, filter]);
 
-    const filteredCocktails = cocktails
-    .filter(cocktail => cocktail.name.toLowerCase().includes(searchInput.toLowerCase()))
+    const filteredCocktails = cocktails.filter(cocktail => cocktail.name.toLowerCase().includes(searchInput.toLowerCase()) 
+    &&
+    (category === "All" || cocktail.spirit === category)
+    ) 
 
     return (
         <div>
           <h2 className="directory-title">DIRECTORY</h2>
-          <SearchBar onSearch={(searchInput) => setSearchInput(searchInput)} onFilter={(filter) => setFilter(filter)}/>
+          <SearchBar onSearch={(searchInput) => setSearchInput(searchInput)} onFilter={(filter) => setCategory(filter)}/>
           <CocktailContainer cocktails={filteredCocktails}/>
         </div>
     );
