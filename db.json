@@ -89,6 +89,17 @@
       ],
       "garnish": "Lemon Twist",
       "id": 8
+    },
+    {
+      "name": "Daiquiri",
+      "image": "https://images.squarespace-cdn.com/content/v1/5668afe4c21b86d8ce6fc49c/1550355391128-RW9XG85XMFLY9ON7864S/cocktails_filter_2x_0073__0029_Daiquiri_Image%403x.png.png?format=2500w",
+      "spirit": "Rum",
+      "ingredients": [
+        "Simple Syrup",
+        " Lime Juice"
+      ],
+      "garnish": "Lime",
+      "id": 9
     }
   ]
 }

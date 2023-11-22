@@ -5,7 +5,7 @@ import "../styles/Directory.css"
 
 function Directory() {
     const [cocktails, setCocktails] = useState([]);
-    const [filteredCocktails, setFilteredCocktails] = useState([]);
+    // const [filteredCocktails, setFilteredCocktails] = useState([]);
     const [searchInput, setSearchInput] = useState("");
     const [filter, setFilter] = useState("All");
 
@@ -15,16 +15,19 @@ function Directory() {
       .then(cocktailData => setCocktails(cocktailData))
     }, [])
 
-    useEffect(() => {
-        const filtered = cocktails.filter((cocktail) => {
-          return (
-            cocktail.name.toLowerCase().includes(searchInput.toLowerCase()) &&
-            (filter === "All" || cocktail.spirit === filter)
-          );
-        });
+    // useEffect(() => {
+    //     const filtered = cocktails.filter((cocktail) => {
+    //       return (
+    //         cocktail.name.toLowerCase().includes(searchInput.toLowerCase()) &&
+    //         (filter === "All" || cocktail.spirit === filter)
+    //       );
+    //     });
     
-        setFilteredCocktails(filtered);
-      }, [cocktails, searchInput, filter]);
+    //     setFilteredCocktails(filtered);
+    //   }, [cocktails, searchInput, filter]);
+
+    const filteredCocktails = cocktails
+    .filter(cocktail => cocktail.name.toLowerCase().includes(searchInput.toLowerCase()))
 
     return (
         <div>
