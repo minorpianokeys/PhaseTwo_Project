@@ -4,7 +4,7 @@ import "../styles/DrinkForm.css"
 function DrinkForm({ onSubmit }) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
-    const [spirit, setSpirit] = useState("");
+    const [spirit, setSpirit] = useState("Vodka");
     const [ingredients, setIngredients] = useState([]);
     const [garnish, setGarnish] = useState("");
 
