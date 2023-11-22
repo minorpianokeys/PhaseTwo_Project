@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import CocktailContainer from "../components/CocktailContainer";
-import DrinkForm from "../components/DrinkForm";
-import SearchBar from "../components/SearchBar";
+import CocktailContainer from "./CocktailContainer";
+import DrinkForm from "./DrinkForm";
+import SearchBar from "./SearchBar";
 import "../styles/Directory.css"
 
 function Directory() {

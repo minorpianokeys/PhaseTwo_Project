@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "../styles/Home.css"
-import Card from "../components/Card";
+import Card from "./Card";
 
 function Home() {
     const featuredCocktail = {

@@ -1,8 +1,8 @@
 import App from "./App";
-import Home from "./pages/Home";
-import DrinkForm from "./components/DrinkForm";
-import Directory from "./pages/Directory";
-import ErrorPage from "./pages/ErrorPage";
+import Home from "./components/Home";
+import About from "./components/About";
+import Directory from "./components/Directory";
+import ErrorPage from "./components/ErrorPage";
 
 const routes = [
     {
@@ -19,8 +19,8 @@ const routes = [
                 element: <Directory />
             },
             {
-                path: "/new",
-                element: <DrinkForm />
+                path: "/about",
+                element: <About />
             }
         ]
     }
