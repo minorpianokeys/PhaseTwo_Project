@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "../styles/DrinkForm.css"
 
-function DrinkForm() {
+function DrinkForm({ onSubmit }) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [spirit, setSpirit] = useState("");
     const [ingredients, setIngredients] = useState([]);
     const [garnish, setGarnish] = useState("");
-    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -28,67 +26,70 @@ function DrinkForm() {
             },
             body: JSON.stringify(newDrinkData)
         })
-        .then(navigate("/directory"))
+        .then((r) => r.json())
+        .then((data) => onSubmit(data))
     }
 
     return (
-        <form onSubmit={handleSubmit} className="form">
-            <label className="form-label">
-                Name:
-                <input 
-                type="text"
-                name="name"
-                className="form-input"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                />
-            </label>
-            <br/>
-            <label className="form-label">
-                Image:
-                <input 
-                type="text"
-                name="image"
-                className="form-input"
-                value={image}
-                onChange={(e) => setImage(e.target.value)}
-                />
-            </label>
-            <label className="form-label">
-                Spirit:
-                <select name="spirit" className="form-input" value={spirit} onChange={(e) => setSpirit(e.target.value)}>
-                    <option value="Vodka">Vodka</option>
-                    <option value="Gin">Gin</option>
-                    <option value="Rum">Rum</option>
-                    <option value="Whiskey">Whiskey</option>
-                    <option value="Tequila">Tequila</option>
-                </select>
-            </label>
-            <br/>
-            <label className="form-label">
-                Ingredients:
-                <input 
-                type="text"
-                name="ingredients"
-                className="form-input"
-                value={ingredients}
-                onChange={(e) => setIngredients(e.target.value)}
-                />
-            </label>
-            <br/>
-            <label className="form-label">
-                Garnish:
-                <input 
-                type="text"
-                name="garnish"
-                className="form-input"
-                value={garnish}
-                onChange={(e) => setGarnish(e.target.value)}
-                />
-            </label>
-            <br/>
-            <button type="submit" className="form-button">Add Cocktail</button>
-        </form>
+        <div>
+            <form onSubmit={handleSubmit} className="form">
+                <label className="form-label">
+                    Name:
+                    <input 
+                    type="text"
+                    name="name"
+                    className="form-input"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    />
+                </label>
+                <br/>
+                <label className="form-label">
+                    Image:
+                    <input 
+                    type="text"
+                    name="image"
+                    className="form-input"
+                    value={image}
+                    onChange={(e) => setImage(e.target.value)}
+                    />
+                </label>
+                <label className="form-label">
+                    Spirit:
+                    <select name="spirit" className="form-select" value={spirit} onChange={(e) => setSpirit(e.target.value)}>
+                        <option value="Vodka">Vodka</option>
+                        <option value="Gin">Gin</option>
+                        <option value="Rum">Rum</option>
+                        <option value="Whiskey">Whiskey</option>
+                        <option value="Tequila">Tequila</option>
+                    </select>
+                </label>
+                <br/>
+                <label className="form-label">
+                    Ingredients:
+                    <input 
+                    type="text"
+                    name="ingredients"
+                    className="form-input"
+                    value={ingredients}
+                    onChange={(e) => setIngredients(e.target.value)}
+                    />
+                </label>
+                <br/>
+                <label className="form-label">
+                    Garnish:
+                    <input 
+                    type="text"
+                    name="garnish"
+                    className="form-input"
+                    value={garnish}
+                    onChange={(e) => setGarnish(e.target.value)}
+                    />
+                </label>
+                <br/>
+                <button type="submit" className="form-button">Add Cocktail</button>
+            </form>
+        </div>
     )
 }
 

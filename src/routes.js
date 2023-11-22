@@ -1,6 +1,6 @@
 import App from "./App";
 import Home from "./pages/Home";
-import AddDrink from "./pages/AddDrink";
+import DrinkForm from "./components/DrinkForm";
 import Directory from "./pages/Directory";
 import ErrorPage from "./pages/ErrorPage";
 
@@ -20,7 +20,7 @@ const routes = [
             },
             {
                 path: "/new",
-                element: <AddDrink />
+                element: <DrinkForm />
             }
         ]
     }
