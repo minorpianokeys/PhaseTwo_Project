@@ -6,8 +6,8 @@ import "../styles/Directory.css"
 
 function Directory() {
   const [cocktails, setCocktails] = useState([]);
-  const [searchInput, setSearchInput] = useState("");
-  const [category, setCategory] = useState("All");
+  const [searchBy, setSearchBy] = useState("");
+  const [filterBy, setFilterBy] = useState("All");
 
   useEffect(() => {
     fetch("http://localhost:3001/cocktails")
@@ -19,15 +19,20 @@ function Directory() {
     setCocktails([...cocktails, data])
   }
 
-  const filteredCocktails = cocktails.filter(cocktail => cocktail.name.toLowerCase().includes(searchInput.toLowerCase()) && 
-      (category === "All" || cocktail.spirit === category)
+  const filteredCocktails = cocktails.filter(cocktail => cocktail.name.toLowerCase().includes(searchBy.toLowerCase()) && 
+      (filterBy === "All" || cocktail.spirit === filterBy)
     )
 
     return (
         <div>
           <h2 className="directory-title">DIRECTORY</h2>
           <DrinkForm onSubmit={handleAddDrink}/>
-          <SearchBar onSearch={(searchInput) => setSearchInput(searchInput)} onFilter={(filter) => setCategory(filter)}/>
+          <SearchBar 
+          onSearch={(searchInput) => setSearchBy(searchInput)} 
+          searchBy={searchBy}
+          onFilter={(filter) => setFilterBy(filter)}
+          filterBy={filterBy}
+          />
           <CocktailContainer cocktails={filteredCocktails}/>
         </div>
     );
