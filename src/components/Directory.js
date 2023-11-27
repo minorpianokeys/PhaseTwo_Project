@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import DrinkForm from "./DrinkForm";
 import SearchBar from "./SearchBar";
-import Card from "./Card";
+import CocktailContainer from "./CocktailContainer";
 import "../styles/Directory.css"
 
 function Directory() {
@@ -28,11 +28,7 @@ function Directory() {
           <h2 className="directory-title">DIRECTORY</h2>
           <DrinkForm onSubmit={handleAddDrink}/>
           <SearchBar onSearch={(searchInput) => setSearchInput(searchInput)} onFilter={(filter) => setCategory(filter)}/>
-          <div className="cocktail-container">
-          {filteredCocktails.map(cocktail => (
-            <Card key={cocktail.id} cocktail={cocktail}/>
-            ))}
-            </div>
+          <CocktailContainer cocktails={filteredCocktails}/>
         </div>
     );
 }
